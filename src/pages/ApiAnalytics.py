@@ -1,12 +1,13 @@
+import os
 import pandas as pd
 from dash import html, dcc
 import plotly.express as px
 import pathlib
 
 PATH = pathlib.Path(__file__).parent.parent
-DATA_PATH = PATH.joinpath("api_flight_data.csv").resolve()
-
+DATA_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "api_flight_data.csv"))
 df = pd.read_csv(DATA_PATH)
+
 df['scheduled_time'] = pd.to_datetime(df['scheduled_time'])
 
 # Bar chart - Number of flights per destination

@@ -3,10 +3,13 @@ from dash.dependencies import Input, Output
 from src.pages import ApiAnalytics
 import dash
 import dash_bootstrap_components as dbc
+import os
+import pandas as pd
 
 # Connect to your app pages
 from src.pages import Analytics
 from src.pages.Analytics import flight_scrapper_dash
+from src.components import navbar
 
 # Connect the navbar to the index
 from src.components import navbar
@@ -31,7 +34,7 @@ app.layout = html.Div([
 def display_page(pathname):
     if pathname == '/ApiAnalytics':
         return ApiAnalytics.layout
-    return Analytics.layout
+    return ApiAnalytics.layout
 
 
 @app.callback([Output(component_id="indicators_flights", component_property="figure"),
