@@ -1,42 +1,124 @@
+# Monitor Flight Prices using Dash and Plotly
 
-<img alt="Python" src="https://img.shields.io/badge/Python%20-%2314354C.svg?style=flat-square&logo=python&logoColor=white" /> <img alt="Jupyter" src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white&style=flat" /> <img alt="Plotly" src="https://img.shields.io/badge/Plotly-3F4F75?logo=Plotly&logoColor=white&style=flat" /> <img alt="Dash" src="https://img.shields.io/badge/Dash-008DE4?logo=Dash&logoColor=white&style=flat" />
+<img alt="Python" src="https://img.shields.io/badge/Python%20-%2314354C.svg?style=flat-square&logo=python&logoColor=white" />
+<img alt="Dash" src="https://img.shields.io/badge/Dash-008DE4?logo=Dash&logoColor=white&style=flat" />
+<img alt="Plotly" src="https://img.shields.io/badge/Plotly-3F4F75?logo=Plotly&logoColor=white&style=flat" />
+<img alt="Pandas" src="https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=white&style=flat" />
 
-
-# Monitor Webscraped Flight Prices using Dash and Plotly
-
-This open-source algorithm is designed to enable dynamic web scraping for monitoring flight prices on United Airlines' website. By leveraging the power of Python's pandas and selenium libraries, users can automate the process of checking for fluctuations in flight prices, saving valuable time and potentially reducing travel expenses. The algorithm offers adaptability, allowing users to explore data from various airlines or gather information for specific dates.
-
-Furthermore, the project extends beyond web scraping to encompass data analysis and visualization using Plotly and Dash. Through the integration of these powerful tools, users can create interactive dashboards that transform flight information into dynamic visuals and insightful graphs. This algorithm/platform unlocks the potential to uncover hidden patterns and gain deeper insights into the airline industry. Ultimately, it provides a flexible and user-friendly flight analytics solution, empowering users to make informed decisions about their travel plans and optimize their flight choices to save money and time.
-
-## Table of Contents
-
-- [Overview](#overview)
-- [Built With](#built-with)
-- [Features](#features)
+---
 
 ## Overview
-### Webscrapping Flight Prices
 
-> Prototype Blueprints
+This project fetches live flight data from the [AviationStack API](https://aviationstack.com/), processes it with Python and Pandas, and visualizes it using Dash and Plotly. The dashboard provides insights into flight schedules, airline shares, and route popularity. An AI-powered summary (using Google Gemini) offers quick, actionable insights from the data.
+
+---
+
+## Dashboard Preview
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/70657426/216797367-e675ede0-21e6-4d29-be21-dda87e7e2cf5.png">
+  <img src="dashboard.png" alt="Dashboard Screenshot" width="600"/>
 </p>
 
- <br>
- 
-> Actual Dashboard
-<p align="center">
-<img src="https://github.com/JosephZahar/Monitor-Webscraped-Flight-Prices-using-Dash-and-Plotly/assets/70657426/c11053c6-2b63-466c-befe-c11a557b78dd.png">
-</p>
-
-
-
-### Built With
-- Data Processing & Manipulation: [Numpy](https://numpy.org), [Pandas](https://pandas.pydata.org)
-- Static and Dynamic Webscrapping: [BeautifulSoup](https://pypi.org/project/beautifulsoup4/), [selenium](https://pypi.org/project/selenium/)
-- Dashboard Infrastructure: [Dash](https://plotly.com/dash/)
-- Visualizations: [Plotly](https://plotly.com)
+---
 
 ## Features
-The Dashboard generated is daily updated with the flight prices webscrapped from different airlines. The visuals provided allow the user to derive insights and implement his own analyis that would potentially save a significant amount of money! The dashboard allows daily tracking and monitoring of prices and thus flight dates demand,allowing us to choose the most adequate departure and return dates for our planned trips.
+
+- **Live Data Fetching:** Retrieves up-to-date flight data from the AviationStack API.
+- **Data Processing:** Cleans and structures flight data with Pandas.
+- **Interactive Dashboard:** Visualizes flight trends, airline shares, and schedules using Dash and Plotly.
+- **AI Insights:** Summarizes key trends and patterns using Google Gemini.
+- **Easy to Run:** No web scraping or Selenium required—just an API key.
+
+---
+
+## Getting Started
+
+### 1. Clone the Repository
+
+```sh
+git clone https://github.com/ChitrakshSuri/Airline-Demand-Tracker
+cd Airline-Demand-Tracker
+```
+
+### 2. Install Dependencies
+
+It’s recommended to use a virtual environment:
+
+```sh
+python -m venv venv
+venv\Scripts\activate  # On Windows
+pip install -r requirements.txt
+```
+
+### 3. Set Up API Keys
+
+Create a `.env` file in the project root with your AviationStack and Gemini API keys:
+
+```
+AVIATION_STACK_API_KEY=your_aviationstack_key
+GEMINI_API_KEY=your_gemini_key
+```
+
+### 4. Fetch Flight Data
+
+```sh
+python fetch_api_flights.py
+```
+
+This will create or update `api_flight_data.csv`.
+
+### 5. Launch the Dashboard
+
+```sh
+python index.py
+```
+
+Visit [http://127.0.0.1:8050/ApiAnalytics](http://127.0.0.1:8050/ApiAnalytics) in your browser.
+
+---
+
+## Project Structure
+
+```
+Monitor-Webscraped-Flight-Prices-using-Dash-and-Plotly/
+│
+├── fetch_api_flights.py           # Fetches flight data from AviationStack API
+├── api_flight_data.csv            # Latest flight data (generated)
+├── index.py                       # Dash app entry point
+├── requirements.txt               # Python dependencies
+├── src/
+│   ├── pages/
+│   │   └── ApiAnalytics.py        # Dashboard layout and figures
+│   └── utils/
+│       └── gemini.py              # AI summary utility (Google Gemini)
+└── README.md
+```
+
+---
+
+## Built With
+
+- [Python](https://www.python.org/)
+- [Pandas](https://pandas.pydata.org/)
+- [Dash](https://dash.plotly.com/)
+- [Plotly](https://plotly.com/)
+- [AviationStack API](https://aviationstack.com/)
+- [Google Gemini](https://ai.google.dev/gemini-api/docs/quickstart)
+
+---
+
+## License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
+
+## Acknowledgements
+
+- Flight data provided by [AviationStack](https://aviationstack.com/).
+- Dashboard UI powered by [Dash](https://dash.plotly.com/) and [Plotly](https://plotly.com/).
+- AI summaries powered by [Google Gemini](https://ai.google.dev/).
+
+---
+
+**Feel free to contribute or suggest improvements!**
