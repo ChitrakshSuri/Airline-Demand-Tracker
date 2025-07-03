@@ -3,8 +3,8 @@ from dash.dependencies import Input, Output
 import dash
 import dash_bootstrap_components as dbc
 
-from src.pages import ApiAnalytics, Analytics
-from src.pages.Analytics import flight_scrapper_dash
+from src.pages import ApiAnalytics
+# from src.pages.Analytics import flight_scrapper_dash
 # from src.components import navbar
 from src.utils.gemini import get_flight_insights_from_gemini
 
@@ -44,8 +44,8 @@ def display_page(pathname):
     [Input("departure_date", "value"),
      Input("return_date", "value")]
 )
-def update_figures(departure_date, return_date):
-    return flight_scrapper_dash(departure_date, return_date)
+# def update_figures(departure_date, return_date):
+    # return flight_scrapper_dash(departure_date, return_date)
 
 # Gemini Summary Callback
 @app.callback(

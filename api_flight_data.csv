@@ -1,4 +1,7 @@
 airline_name,from,to,flight_status,scheduled_time,timestamp
+Air India,Indira Gandhi International,Melbourne - Tullamarine Airport,scheduled,2025-07-04T01:45:00+00:00,2025-07-04
+Air New Zealand,Indira Gandhi International,Melbourne - Tullamarine Airport,scheduled,2025-07-04T01:45:00+00:00,2025-07-04
+Azimuth,Indira Gandhi International,Mineralnye Vodyj,scheduled,2025-07-04T01:45:00+00:00,2025-07-04
 Qantas,Brisbane International,Jackson Field,scheduled,2025-07-04T09:05:00+00:00,2025-07-03
 Virgin Australia,Brisbane International,Sydney Kingsford Smith Airport,scheduled,2025-07-04T09:05:00+00:00,2025-07-03
 Rex Regional Express,Brisbane International,Coffs Harbour,scheduled,2025-07-04T09:00:00+00:00,2025-07-03
