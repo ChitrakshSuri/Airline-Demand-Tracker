@@ -16,7 +16,7 @@ This project fetches live flight data from the [AviationStack API](https://aviat
 ## Dashboard Preview
 
 <p align="center">
-  ![Dashboard Screenshot](dashboard.png)
+  <img src="dashboard.png" alt="Dashboard Screenshot" width="600"/>
 </p>
 
 ---
