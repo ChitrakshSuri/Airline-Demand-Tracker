@@ -1,0 +1,21 @@
+airline_name,from,to,flight_status,scheduled_time,timestamp
+Qantas,Brisbane International,Jackson Field,scheduled,2025-07-04T09:05:00+00:00,2025-07-03
+Virgin Australia,Brisbane International,Sydney Kingsford Smith Airport,scheduled,2025-07-04T09:05:00+00:00,2025-07-03
+Rex Regional Express,Brisbane International,Coffs Harbour,scheduled,2025-07-04T09:00:00+00:00,2025-07-03
+Solomon Airlines,Brisbane International,Munda,scheduled,2025-07-04T09:00:00+00:00,2025-07-03
+Virgin Australia,Brisbane International,Mackay,scheduled,2025-07-04T09:00:00+00:00,2025-07-03
+Qantas,Brisbane International,Melbourne - Tullamarine Airport,scheduled,2025-07-04T09:00:00+00:00,2025-07-03
+Jetstar,Brisbane International,Melbourne - Tullamarine Airport,scheduled,2025-07-04T09:00:00+00:00,2025-07-03
+Suparna Airlines,Hangzhou,Xiamen,scheduled,2025-07-04T05:15:00+00:00,2025-07-03
+Xiamen Airlines,Ninoy Aquino International,Xiamen,scheduled,2025-07-04T03:25:00+00:00,2025-07-03
+China Postal Airlines,Nanjing Lukou International Airport,Xiamen,scheduled,2025-07-04T04:00:00+00:00,2025-07-03
+Shandong Airlines,Xiamen,Tianhe International,scheduled,2025-07-04T07:05:00+00:00,2025-07-03
+China Express Air,Xiamen,Tianhe International,scheduled,2025-07-04T07:05:00+00:00,2025-07-03
+Tibet Airlines,Xiamen,Tianhe International,scheduled,2025-07-04T07:05:00+00:00,2025-07-03
+Air China LTD,Xiamen,Tianhe International,scheduled,2025-07-04T07:05:00+00:00,2025-07-03
+Shenzhen Airlines,Xiamen,Tianhe International,scheduled,2025-07-04T07:05:00+00:00,2025-07-03
+Xiamen Airlines,Xiamen,Beijing Daxing International Airport,scheduled,2025-07-04T07:00:00+00:00,2025-07-03
+Hebei Airlines,Xiamen,Beijing Daxing International Airport,scheduled,2025-07-04T07:00:00+00:00,2025-07-03
+Juneyao Airlines,Xiamen,Beijing Daxing International Airport,scheduled,2025-07-04T07:00:00+00:00,2025-07-03
+Sichuan Airlines,Xiamen,Beijing Daxing International Airport,scheduled,2025-07-04T07:00:00+00:00,2025-07-03
+China Express Air,Xiamen,Beijing Daxing International Airport,scheduled,2025-07-04T07:00:00+00:00,2025-07-03

@@ -1,5 +1,6 @@
 from dash import html, dcc
 from dash.dependencies import Input, Output
+from src.pages import ApiAnalytics
 import dash
 import dash_bootstrap_components as dbc
 
@@ -28,6 +29,8 @@ app.layout = html.Div([
 @app.callback(Output('page-content', 'children'),
               [Input('url', 'pathname')])
 def display_page(pathname):
+    if pathname == '/ApiAnalytics':
+        return ApiAnalytics.layout
     return Analytics.layout
 
 
