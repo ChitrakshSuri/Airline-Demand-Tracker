@@ -16,7 +16,7 @@ This project fetches live flight data from the [AviationStack API](https://aviat
 ## Dashboard Preview
 
 <p align="center">
-  <img src="dashboard.png" alt="Dashboard Screenshot" width="600"/>
+  ![Dashboard Screenshot](dashboard.png)
 </p>
 
 ---
@@ -73,7 +73,7 @@ This will create or update `api_flight_data.csv`.
 python index.py
 ```
 
-Visit [http://127.0.0.1:8050/ApiAnalytics](http://127.0.0.1:8050/ApiAnalytics) in your browser.
+Visit [http://127.0.0.1:8050/](http://127.0.0.1:8050) in your browser.
 
 ---
 
