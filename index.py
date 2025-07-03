@@ -24,11 +24,14 @@ app.layout = html.Div([
     html.Div(id='page-content')
 ])
 
-@app.callback(Output('page-content', 'children'), [Input('url', 'pathname')])
+@app.callback(Output('page-content', 'children'), Input('url', 'pathname'))
 def display_page(pathname):
     if pathname == '/ApiAnalytics':
         return ApiAnalytics.layout
-    return Analytics.layout  # You can replace with a landing page if needed
+    elif pathname == '/':
+        return ApiAnalytics.layout   # 👈 Set default to ApiAnalytics
+    else:
+        return html.H1("404 Page Not Found")# You can replace with a landing page if needed
 
 # Analytics figures callback
 @app.callback(

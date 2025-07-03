@@ -37,28 +37,44 @@ timeline_fig = px.scatter(
 layout = html.Div([
     dbc.NavbarSimple(
         brand="Flights Scrapper Dashboard",
-        color="blue", dark=True,
-        # children=[
-        #     dbc.NavItem(dbc.NavLink("Analytics", href="/")),
-        #     dbc.NavItem(dbc.NavLink("Live API Insights", href="/ApiAnalytics"))
-        # ]
+        color="dark", dark=True
     ),
 
     html.Br(),
 
     dbc.Container([
-
         html.H3("📊 Live API Flight Insights", className="text-primary mb-4"),
 
+        # Wrapped both charts in cards
         dbc.Row([
-            dbc.Col(dcc.Graph(figure=route_count_fig), md=6),
-            dbc.Col(dcc.Graph(figure=airline_fig), md=6)
+            dbc.Col(
+                dbc.Card([
+                    dbc.CardHeader("Number of Flights by Destination"),
+                    dbc.CardBody(dcc.Graph(figure=route_count_fig))
+                ], className="mb-4"),
+                md=6
+            ),
+            dbc.Col(
+                dbc.Card([
+                    dbc.CardHeader("Airline Share (API Flights)"),
+                    dbc.CardBody(dcc.Graph(figure=airline_fig))
+                ], className="mb-4"),
+                md=6
+            )
         ]),
 
+        # Timeline chart in card
         dbc.Row([
-            dbc.Col(dcc.Graph(figure=timeline_fig), md=12)
-        ], className="mt-4"),
+            dbc.Col(
+                dbc.Card([
+                    dbc.CardHeader("Flight Schedule Timeline"),
+                    dbc.CardBody(dcc.Graph(figure=timeline_fig))
+                ], className="mb-4"),
+                md=12
+            )
+        ]),
 
+        # AI Summary Card
         dbc.Card([
             dbc.CardBody([
                 html.H5("🤖 AI Summary of Flights", className="card-title"),
